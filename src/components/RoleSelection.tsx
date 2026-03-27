@@ -21,14 +21,15 @@ const RoleSelection: React.FC<RoleSelectionProps> = ({ onSelect, onLogin, onCrea
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       className="flex-1 flex flex-col p-24 bg-white"
+      style={{ overflow: 'hidden' }}
     >
-      <div className="mt-32 mb-40">
+      <div className="mt-12 mb-20">
         <h2 className="mb-12">Who are you?</h2>
         <p>Please select your account type to proceed with the best experience.</p>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
-        <div className="grid grid-cols-1 gap-16">
+      <div className="flex-1 overflow-y-auto" style={{ minHeight: 0 }}>
+        <div className="flex flex-col gap-12">
           {roles.map((role) => (
             <motion.div
               key={role.id}
@@ -49,7 +50,7 @@ const RoleSelection: React.FC<RoleSelectionProps> = ({ onSelect, onLogin, onCrea
         </div>
       </div>
 
-      <div className="flex flex-col gap-12 mt-40">
+      <div className="flex flex-col gap-12 mt-20">
         <button className="btn btn-primary" onClick={onCreateAccount}>
           <UserPlus size={20} className="mr-8" />
           Create Account
