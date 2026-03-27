@@ -138,8 +138,40 @@ p {
 }
 
 /* Utilities */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
 .flex-1 { flex: 1; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
 .text-center { text-align: center; }
+
+/* Spacing */
+.gap-4 { gap: 4px; }
+.gap-8 { gap: 8px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.ml-8 { margin-left: 8px; }
+.mr-8 { margin-right: 8px; }
+
 .mt-20 { margin-top: 20px; }
+.mt-32 { margin-top: 32px; }
+.mt-40 { margin-top: 40px; }
+.mt-60 { margin-top: 60px; }
+
+.mb-12 { margin-bottom: 12px; }
 .mb-20 { margin-bottom: 20px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-40 { margin-bottom: 40px; }
+
+/* Padding */
+.p-8 { padding: 8px; }
+.p-12 { padding: 12px; }
+.p-16 { padding: 16px; }
 .p-24 { padding: 24px; }
+
+/* Borders & Backgrounds */
+.rounded-xl { border-radius: 12px; }
+.rounded-3xl { border-radius: 24px; }
+.rounded-full { border-radius: 9999px; }
+.bg-white { background-color: var(--white); }
