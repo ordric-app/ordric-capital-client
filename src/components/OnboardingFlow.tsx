@@ -80,7 +80,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete, onSkip }) =
         </AnimatePresence>
       </div>
 
-      <div className="mb-40">
+      <div className="mb-60">
         <div className="dots-container mb-32">
           {slides.map((_, index) => (
             <div 

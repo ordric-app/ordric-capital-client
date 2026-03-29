@@ -31,7 +31,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart, onLogin }) => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-16 mb-20">
+      <div className="flex flex-col gap-16 mb-60">
         <button className="btn btn-primary" onClick={onStart}>
           Get Started
           <ChevronRight size={20} className="ml-8" />
