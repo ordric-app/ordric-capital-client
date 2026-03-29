@@ -106,6 +106,28 @@ p {
   color: var(--text-dark);
 }
 
+.btn-skip {
+  background: transparent;
+  color: var(--text-light);
+  padding: 8px 16px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+.btn-skip:hover {
+  background-color: var(--grey);
+  color: var(--primary);
+}
+
 /* Card Style Sections */
 .card {
   background: var(--white);
@@ -145,6 +167,11 @@ p {
 .justify-center { justify-content: center; }
 .justify-end { justify-content: flex-end; }
 .text-center { text-align: center; }
+.text-light { color: var(--text-light); }
+.text-primary { color: var(--primary); }
+.text-sm { font-size: 14px; }
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
 
 /* Spacing */
 .gap-4 { gap: 4px; }
