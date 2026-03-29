@@ -20,7 +20,7 @@ const RoleSelection: React.FC<RoleSelectionProps> = ({ onSelect, onLogin, onCrea
     <motion.div 
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="flex-1 flex flex-col p-24 bg-white"
+      className="flex-1 flex flex-col p-32 bg-white mb-40"
       style={{ overflow: 'hidden' }}
     >
       <div className="mt-12 mb-20">

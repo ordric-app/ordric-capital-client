@@ -4,8 +4,9 @@ import SplashScreen from './components/SplashScreen';
 import WelcomeScreen from './components/WelcomeScreen';
 import OnboardingFlow from './components/OnboardingFlow';
 import RoleSelection from './components/RoleSelection';
+import StokvelDashboard from './components/stokvel/StokvelDashboard';
 
-type AppState = 'splash' | 'welcome' | 'onboarding' | 'role-selection';
+type AppState = 'splash' | 'welcome' | 'onboarding' | 'role-selection' | 'dashboard';
 
 function App() {
   const [step, setStep] = useState<AppState>('splash');
@@ -15,9 +16,9 @@ function App() {
   const handleOnboardingComplete = () => setStep('role-selection');
   const handleSkipOnboarding = () => setStep('role-selection');
   
-  const handleRoleSelect = (role: string) => {
-    console.log('Selected role:', role);
-    alert(`Enrolling as: ${role}`);
+  const handleRoleSelect = (_role: string) => {
+    // Navigate straight to new Stokvel dashboard
+    setStep('dashboard');
   };
 
   return (
@@ -30,7 +31,7 @@ function App() {
           <WelcomeScreen 
             key="welcome" 
             onStart={handleStartOnboarding} 
-            onLogin={() => alert('Redirecting to Login')} 
+            onLogin={() => setStep('dashboard')} 
           />
         )}
         {step === 'onboarding' && (
@@ -44,9 +45,12 @@ function App() {
           <RoleSelection 
             key="role-selection" 
             onSelect={handleRoleSelect} 
-            onLogin={() => alert('Redirecting to Login')} 
+            onLogin={() => setStep('dashboard')} 
             onCreateAccount={() => alert('Redirecting to Registration')} 
           />
+        )}
+        {step === 'dashboard' && (
+          <StokvelDashboard key="dashboard" />
         )}
       </AnimatePresence>
     </div>

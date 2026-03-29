@@ -50,7 +50,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete, onSkip }) =
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex-1 flex flex-col p-24 bg-white"
+      className="flex-1 flex flex-col p-32 bg-white"
     >
       <div className="flex justify-end mb-8">
         <button onClick={onSkip} className="btn-skip">
