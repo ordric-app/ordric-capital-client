@@ -54,7 +54,7 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete, onSkip }) =
     >
       <div className="flex justify-end mb-8">
         <button onClick={onSkip} className="btn-skip">
-          Skip <X size={16} />
+          Skip <X size={18} />
         </button>
       </div>
 
