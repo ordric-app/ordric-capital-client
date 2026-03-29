@@ -240,14 +240,20 @@ p {
 /* Desktop view adjustments */
 @media (min-width: 500px) {
   .app-container {
-    max-height: 90vh;
+    max-height: 95vh;
     border-radius: 40px;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    border: 1px solid rgba(0,0,0,0.05);
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
   }
   
-  .p-24 {
-    padding: 32px;
+  .p-24, .p-32 {
+    padding: 40px;
+  }
+  
+  .btn-skip {
+    padding: 12px 24px;
+    font-size: 16px;
   }
 }
