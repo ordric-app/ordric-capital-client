@@ -36,7 +36,7 @@ const DashboardHome: React.FC<DashboardHomeProps> = ({ userName }) => {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex-1 flex flex-col pb-40"
+      className="pb-40"
     >
       {/* Header */}
       <header className="dashboard-header">
@@ -55,8 +55,8 @@ const DashboardHome: React.FC<DashboardHomeProps> = ({ userName }) => {
         </button>
       </header>
 
-      {/* Summary Cards */}
-      <div className="summary-cards-container">
+      {/* Summary Cards - Horizontal ScrollView equivalent */}
+      <div className="summary-cards-container hide-scrollbar" style={{ overflowX: 'auto' }}>
         {/* Stokvel Card */}
         <div className="summary-card stokvel">
           <div className="flex justify-between items-start">

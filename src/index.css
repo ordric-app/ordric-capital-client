@@ -195,6 +195,15 @@ p {
 
 .w-full { width: 100%; }
 .h-full { height: 100%; }
+.overflow-y-auto { overflow-y: auto; }
+.overflow-x-auto { overflow-x: auto; }
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
 /* Spacing */
 .gap-4 { gap: 4px; }
@@ -300,7 +309,8 @@ p {
 }
 
 .summary-card {
-  min-width: 280px;
+  width: 280px;
+  flex-shrink: 0;
   scroll-snap-align: center;
   padding: 20px;
   border-radius: 24px;

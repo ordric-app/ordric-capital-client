@@ -27,8 +27,8 @@ const ClientDashboard: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 flex flex-col bg-white w-full relative h-full overflow-hidden">
-      <main className="flex-1 overflow-y-auto mb-80" style={{ scrollBehavior: 'smooth' }}>
+    <div className="flex-1 flex flex-col bg-white w-full relative h-full">
+      <main className="flex-1 overflow-y-auto" style={{ scrollBehavior: 'smooth', paddingBottom: '90px' }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -36,7 +36,6 @@ const ClientDashboard: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="h-full"
           >
             {renderContent()}
           </motion.div>
