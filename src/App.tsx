@@ -4,7 +4,7 @@ import SplashScreen from './components/SplashScreen';
 import WelcomeScreen from './components/WelcomeScreen';
 import OnboardingFlow from './components/OnboardingFlow';
 import RoleSelection from './components/RoleSelection';
-import StokvelDashboard from './components/stokvel/StokvelDashboard';
+import ClientDashboard from './components/ClientDashboard';
 
 type AppState = 'splash' | 'welcome' | 'onboarding' | 'role-selection' | 'dashboard';
 
@@ -17,7 +17,7 @@ function App() {
   const handleSkipOnboarding = () => setStep('role-selection');
   
   const handleRoleSelect = (_role: string) => {
-    // Navigate straight to new Stokvel dashboard
+    // Navigate straight to new client hub
     setStep('dashboard');
   };
 
@@ -50,7 +50,7 @@ function App() {
           />
         )}
         {step === 'dashboard' && (
-          <StokvelDashboard key="dashboard" />
+          <ClientDashboard key="dashboard" />
         )}
       </AnimatePresence>
     </div>
